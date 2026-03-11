@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-up Form</title>
+  </head>
+  <body>
+    <div class="signup-form">
+      <div class="signup-form__img-container">
+        <img src="synthwave-desert-3840x2160-15509.jpg" alt="" />
+        <p class="img-container--brand-name">Synthwave</p>
+        <p class="img-container--credits">
+          Art by
+          <a
+            target="_blank"
+            href="https://www.instagram.com/pgmarte?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            >Pedro Miranda</a
+          >
+        </p>
+      </div>
+      <form class="form" action="" method="">
+        <h1>Sign up</h1>
+        <div class="form__input--row">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            required
+            minlength="6"
+            maxlength="20"
+            spellcheck="false"
+          />
+          <span></span>
+        </div>
+        <div class="form__input--row">
+          <label for="mail">Email</label>
+          <input type="email" name="user-mail" id="mail" spellcheck="false" />
+          <span></span>
+        </div>
+        <div class="form__input--row">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="user-password"
+            id="password"
+            required
+            minlength="7"
+            maxlength="30"
+            spellcheck="false"
+          />
+          <span></span>
+        </div>
+        <div class="form__input--row">
+          <label for="confirm-password">Confirm Password</label>
+          <input
+            type="password"
+            name=""
+            id="confirm-password"
+            required
+            minlength="7"
+            maxlength="30"
+            spellcheck="false"
+          />
+          <span></span>
+        </div>
+        <p class="form__redirect">
+          Already have an account? <a href="">Log in</a>
+        </p>
+        <button class="form__submit" type="submit">Create account</button>
+      </form>
+    </div>
+  </body>
+</html>

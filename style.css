@@ -1,0 +1,196 @@
+@font-face {
+  font-family: "Exo";
+  src: url("fonts/Exo-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ExoBold";
+  src: url("fonts/Exo-Bold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Exo";
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgb(75, 0, 75);
+}
+
+.signup-form {
+  width: 90rem;
+  height: 50rem;
+  border-radius: 50px;
+  display: flex;
+  box-shadow: 0px 0px 30px black;
+  overflow: hidden;
+  background-color: rgb(46, 0, 46);
+}
+
+.signup-form__img-container {
+  flex: 1;
+  position: relative;
+}
+
+.img-container--brand-name {
+  position: absolute;
+  font-size: clamp(0.2rem, 4vw, 4rem);
+  top: 10%;
+  left: 50%;
+  color: #ff60f7;
+  letter-spacing: 15px;
+  transform: translate(-50%, -50%);
+}
+
+.img-container--credits {
+  position: absolute;
+  color: aliceblue;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+a {
+  color: #ff60f7;
+}
+
+a:hover {
+  color: rgb(0, 255, 170);
+}
+
+.signup-form__img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.form {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #ff60f7;
+  background-color: rgb(46, 0, 46);
+}
+
+.form h1 {
+  font-size: 3rem;
+  letter-spacing: 3px;
+  font-family: "ExoBold";
+}
+
+.form__input--row {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  flex-flow: row wrap;
+}
+
+.form__redirect {
+  width: 50%;
+  text-align: center;
+}
+
+.form__input--row label,
+.form__redirect {
+  font-size: 1rem;
+  letter-spacing: 3px;
+}
+
+.form__submit {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #ff17e0;
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  font-family: "ExoBold";
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.form > * {
+  margin-bottom: 30px;
+}
+
+.form__input--row input {
+  border: 0;
+  padding: 7px;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  background-color: rgb(32, 0, 32);
+  width: 100%;
+}
+
+.form__input--row label {
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  color: aliceblue;
+}
+
+input + span {
+  position: relative;
+}
+
+input:required + span:after {
+  content: "*";
+  font-size: 1.2rem;
+  position: absolute;
+  color: white;
+  bottom: 35px;
+  right: 0;
+}
+
+input:valid + span:before {
+  position: absolute;
+  content: "✔️";
+  color: transparent;
+  text-shadow: 0 0 0 rgb(0, 255, 170);
+  left: 5px;
+}
+
+input:user-invalid + span:before {
+  position: absolute;
+  content: "✖️";
+  color: transparent;
+  text-shadow: 0 0 0 red;
+  left: 5px;
+  top: 3px;
+}
+
+input:user-invalid {
+  border-bottom: 1px solid red;
+}
+
+input:user-invalid:focus {
+  outline: 1px solid red;
+}
+
+input:user-valid {
+  border-bottom: 1px solid rgb(0, 255, 170);
+}
+
+input:valid:focus {
+  outline: 1px solid aquamarine;
+  border-bottom: 1px solid rgb(0, 255, 170);
+}
