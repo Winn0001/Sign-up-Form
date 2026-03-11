@@ -123,6 +123,17 @@ a:hover {
   display: flex;
   flex-direction: column;
   width: 50%;
+  transition:
+    background-color 0.1s,
+    transform 0.1s;
+}
+
+.form__submit:hover {
+  background-color: rgb(0, 255, 170);
+}
+
+.form__submit:active {
+  transform: scale(0.95);
 }
 
 .form > * {
