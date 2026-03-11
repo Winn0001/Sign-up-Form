@@ -206,3 +206,7 @@ input:valid:focus {
   outline: 1px solid aquamarine;
   border-bottom: 1px solid rgb(0, 255, 170);
 }
+
+input:focus {
+  outline: 1px solid white;
+}
